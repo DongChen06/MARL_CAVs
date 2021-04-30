@@ -25,6 +25,12 @@ All the MARL algorithms are extended from the single-agent RL with parameter sha
 ## Usage
 To run the code, just run it via `python run_xxx.py`.  The config files contain the parameters for the MARL policies.
 
+## Training curves
+<p align="center">
+     <img src="docs/plot_benchmark_safety1.png" alt="output_example" width="60%" height="60%">
+     <br>Fig.2 Performance comparison between the proposed method and 3 state-of-the-art MARL algorithms.
+</p>
+
 ## Cite
 ```
 ///

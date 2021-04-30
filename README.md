@@ -27,7 +27,7 @@ To run the code, just run it via `python run_xxx.py`.  The config files contain 
 
 ## Training curves
 <p align="center">
-     <img src="docs/plot_benchmark_safety1.png" alt="output_example" width="80%" height="80%">
+     <img src="docs/plot_benchmark_safety1.png" alt="output_example" width="90%" height="90%">
      <br>Fig.2 Performance comparison between the proposed method and 3 state-of-the-art MARL algorithms.
 </p>
 

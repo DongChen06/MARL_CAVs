@@ -1,6 +1,6 @@
 # Deep Multi-agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic
 
-An on-policy MARL algorithm for on-ramp merging, which features parameter sharing, action masking, local reward design and a priority-based safety supervisor.
+An on-policy MARL algorithm for highway on-ramp merging problem, which features parameter sharing, action masking, local reward design and a priority-based safety supervisor.
 
 ## Algorithms
 

@@ -18,7 +18,7 @@ All the MARL algorithms are extended from the single-agent RL with parameter sha
 - install the requirements: `pip install -r requirements.txt`
 
 <p align="center">
-     <img src="docs/on-ramp.png" alt="output_example" width="60%" height="60%">
+     <img src="docs/on-ramp.png" alt="output_example" width="40%" height="40%">
      <br>Fig.1 Illustration of the considered on-ramp merging traffic scenario. CAVs (blue) and HDVs (green) coexist on both ramp and through lanes.
 </p>
 
@@ -27,7 +27,7 @@ To run the code, just run it via `python run_xxx.py`.  The config files contain 
 
 ## Training curves
 <p align="center">
-     <img src="docs/plot_benchmark_safety1.png" alt="output_example" width="60%" height="60%">
+     <img src="docs/plot_benchmark_safety1.png" alt="output_example" width="80%" height="80%">
      <br>Fig.2 Performance comparison between the proposed method and 3 state-of-the-art MARL algorithms.
 </p>
 

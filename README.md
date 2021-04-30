@@ -36,3 +36,7 @@ To run the code, just run it via `python run_xxx.py`.  The config files contain 
 ///
 ```
 
+## Reference
+- [Highway-env](https://github.com/eleurent/highway-env)
+
+

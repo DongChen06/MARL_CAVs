@@ -2,6 +2,15 @@
 
 An on-policy MARL algorithm for on-ramp merging, which features parameter sharing, action masking, local reward design and a priority-based safety supervisor.
 
+## Algorithms
+
+All the MARL algorithms are extended from the single-agent RL with parameter sharing among agents.
+- [ ] MAA2C: TBD.
+- [x] MAPPO.
+- [x] MAACKTR.
+- [x] MADQN: Does not work well.
+- [ ] MASAC: TBD.
+
 ## Installation
 - create an python virtual environment: `conda create -n marl_cav python=3.6`
 - active the virtul environment: `conda activate marl_cav`

@@ -9,7 +9,7 @@ An on-policy MARL algorithm for on-ramp merging, which features parameter sharin
 - install the requirements: `pip install -r requirements.txt`
 
 <p align="center">
-     <img src="docs/on-ramp.png" alt="output_example" width="80%" height="80%">
+     <img src="docs/on-ramp.png" alt="output_example" width="60%" height="60%">
      <br>Fig.1 Illustration of the considered on-ramp merging traffic scenario. CAVs (blue) and HDVs (green) coexist on both ramp and through lanes.
 </p>
 

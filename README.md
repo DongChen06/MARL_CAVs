@@ -23,7 +23,7 @@ All the MARL algorithms are extended from the single-agent RL with parameter sha
 </p>
 
 ## Demo
-xxx
+[see the site](https://drive.google.com/drive/u/1/folders/1437My4sDoyPFsUjrThmlu1oJjTkTkvJ7)
 
 ## Usage
 To run the code, just run it via `python run_xxx.py`.  The config files contain the parameters for the MARL policies.
@@ -36,7 +36,14 @@ To run the code, just run it via `python run_xxx.py`.  The config files contain 
 
 ## Cite
 ```
-///
+@misc{chen2021deep,
+      title={Deep Multi-agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic}, 
+      author={Dong Chen and Zhaojian Li and Yongqiang Wang and Longsheng Jiang and Yue Wang},
+      year={2021},
+      eprint={2105.05701},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY}
+}
 ```
 
 ## Reference

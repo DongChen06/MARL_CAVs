@@ -149,6 +149,8 @@ def copy_file_akctr(tar_dir):
 
 
 def init_dir(base_dir, pathes=['train_videos', 'configs', 'models', 'eval_videos', 'eval_logs']):
+    if not os.path.exists("./results/"):
+        os.mkdir("./results/")
     if not os.path.exists(base_dir):
         os.mkdir(base_dir)
     dirs = {}

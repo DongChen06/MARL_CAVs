@@ -2,3 +2,5 @@ numpy
 pandas
 gym
 matplotlib
+opencv-python
+pygame

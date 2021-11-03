@@ -2,6 +2,7 @@ from MADQN import MADQN
 from single_agent.utils_common import agg_double_list
 
 import sys
+sys.path.append("../highway-env")
 import gym
 import numpy as np
 import matplotlib.pyplot as plt

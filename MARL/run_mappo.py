@@ -45,7 +45,7 @@ def train(args):
     config.read(config_dir)
 
     # create an experiment folder
-    now = datetime.utcnow().strftime("%b-%d_%H:%M:%S")
+    now = datetime.utcnow().strftime("%b_%d_%H_%M_%S")
     output_dir = base_dir + now
     dirs = init_dir(output_dir)
     copy_file_ppo(dirs['configs'])
@@ -126,6 +126,7 @@ def train(args):
     # load the model if exist
     mappo.load(model_dir, train_mode=True)
     env.seed = env.config['seed']
+    env.unwrapped.seed = env.config['seed']
     eval_rewards = []
 
     while mappo.n_episodes < MAX_EPISODES:

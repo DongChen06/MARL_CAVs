@@ -45,7 +45,7 @@ def train(args):
     config.read(config_dir)
 
     # create an experiment folder
-    now = datetime.utcnow().strftime("%b_%d_%H_%M_%S")
+    now = datetime.now().strftime("%b_%d_%H_%M_%S")
     output_dir = base_dir + now
     dirs = init_dir(output_dir)
     copy_file_ppo(dirs['configs'])

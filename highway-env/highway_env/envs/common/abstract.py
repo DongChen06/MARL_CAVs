@@ -261,7 +261,9 @@ class AbstractEnv(gym.Env):
                 # compute the headway distance
                 # if vehicle is on the main road
                 if vehicle.lane_index == ("a", "b", 0) or vehicle.lane_index == (
-                        "b", "c", 0) or vehicle.lane_index == ("c", "d", 0):
+                        "b", "c", 0) or vehicle.lane_index == ("c", "d", 0) or vehicle.lane_index == (
+                        "a", "b", 1) or vehicle.lane_index == (
+                        "b", "c", 1) or vehicle.lane_index == ("c", "d", 1):
                     if surrounding_vehicles[0] and (
                             surrounding_vehicles[0].trajectories[t][0][0] - vehicle.trajectories[t][0][
                         0]) <= safety_room:
@@ -305,17 +307,19 @@ class AbstractEnv(gym.Env):
             # print(env_copy.road.network.next_lane(vehicle.lane_index, position=vehicle.position))
 
             # vehicle is on the ramp or not
-            if vehicle.lane_index == ("b", "c", 1):
+            if vehicle.lane_index == ("b", "c", 2):
                 priority_number = -0.5
                 distance_to_merging_end = self.distance_to_merging_end(vehicle)
                 priority_number -= (self.ends[2] - distance_to_merging_end) / self.ends[2]
                 headway_distance = self._compute_headway_distance(vehicle)
                 priority_number += 0.5 * np.log(headway_distance
-                                          / (self.config["HEADWAY_TIME"] * vehicle.speed)) if vehicle.speed > 0 else 0
+                                                / (self.config[
+                                                       "HEADWAY_TIME"] * vehicle.speed)) if vehicle.speed > 0 else 0
             else:
                 headway_distance = self._compute_headway_distance(vehicle)
                 priority_number += 0.5 * np.log(headway_distance
-                                          / (self.config["HEADWAY_TIME"] * vehicle.speed)) if vehicle.speed > 0 else 0
+                                                / (self.config[
+                                                       "HEADWAY_TIME"] * vehicle.speed)) if vehicle.speed > 0 else 0
 
             priority_number += np.random.rand() * 0.001  # to avoid the same priority number for two vehicles
             q.put((priority_number, [vehicle, action, index]))
@@ -344,14 +348,15 @@ class AbstractEnv(gym.Env):
             available_actions = self._get_available_actions(vehicle, env_copy)
             # vehicle is on the main lane
             if vehicle.lane_index == ("a", "b", 0) or vehicle.lane_index == ("b", "c", 0) or vehicle.lane_index == (
-                    "c", "d", 0):
+                    "c", "d", 0) or vehicle.lane_index == ("a", "b", 1) or vehicle.lane_index == (
+                    "b", "c", 1) or vehicle.lane_index == ("c", "d", 1):
                 v_fl, v_rl = env_copy.road.surrounding_vehicles(vehicle)
                 if len(env_copy.road.network.side_lanes(vehicle.lane_index)) != 0:
                     v_fr, v_rr = env_copy.road.surrounding_vehicles(vehicle,
                                                                     env_copy.road.network.side_lanes(
                                                                         vehicle.lane_index)[0])
-                # assume we can observe the ramp on this road
-                elif vehicle.lane_index == ("a", "b", 0) and vehicle.position[0] > self.ends[0]:
+                # assume we can observe vehicles on the ramp from this road
+                elif vehicle.lane_index == ("a", "b", 1) and vehicle.position[0] > self.ends[0]:
                     v_fr, v_rr = env_copy.road.surrounding_vehicles(vehicle, ("k", "b", 0))
                 else:
                     v_fr, v_rr = None, None
@@ -365,7 +370,7 @@ class AbstractEnv(gym.Env):
                                                                         vehicle.lane_index)[0])
                 # assume we can observe the straight road on the ramp
                 elif vehicle.lane_index == ("k", "b", 0):
-                    v_fl, v_rl = env_copy.road.surrounding_vehicles(vehicle, ("a", "b", 0))
+                    v_fl, v_rl = env_copy.road.surrounding_vehicles(vehicle, ("a", "b", 1))
                 else:
                     v_fl, v_rl = None, None
 
@@ -392,7 +397,7 @@ class AbstractEnv(gym.Env):
 
                         elif type(v) is MDPVehicle and v is not vehicle:
                             # use the previous action: idle
-                            mdp_controller(v, env_copy,  actions[v.id])
+                            mdp_controller(v, env_copy, actions[v.id])
                         elif type(v) is MDPVehicle and v is vehicle:
                             if actions[index] == action:
                                 mdp_controller(v, env_copy, action)
@@ -607,7 +612,7 @@ class AbstractEnv(gym.Env):
 
     def distance_to_merging_end(self, vehicle):
         distance_to_end = self.ends[2]
-        if vehicle.lane_index == ("b", "c", 1):
+        if vehicle.lane_index == ("b", "c", 2):
             distance_to_end = sum(self.ends[:3]) - vehicle.position[0]
         return distance_to_end
 
@@ -620,7 +625,7 @@ class AbstractEnv(gym.Env):
                     headway_distance = hd
 
             # also consider the vehicles on the next road segmentation connected to the current lane
-            if (vehicle.lane_index != ("b", "c", 1)) and (
+            if (vehicle.lane_index != ("b", "c", 2)) and (
                     v.lane_index == self.road.network.next_lane(vehicle.lane_index, position=vehicle.position)) and \
                     (v.position[0] > vehicle.position[0]):
                 hd = v.position[0] - vehicle.position[0]

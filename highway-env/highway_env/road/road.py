@@ -309,17 +309,24 @@ class Road(object):
         # we do not consider obstacles
         for v in self.vehicles:
             if v is not vehicle and not isinstance(v, Landmark):
-                if lane_index == ("a", "b", 0) or lane_index == ("b", "c", 0) or lane_index == (
-                        "c", "d", 0):
-                    if lane_index == ("a", "b", 0) and (
-                            v.lane_index == ("a", "b", 0) or v.lane_index == ("b", "c", 0)):
+                if lane_index == ("a", "b", 0) or lane_index == ("a", "b", 1) or lane_index == (
+                        "b", "c", 0) or lane_index == ("b", "c", 1) \
+                        or lane_index == ("c", "d", 0) or lane_index == ("c", "d", 1):
+                    if (lane_index == ("a", "b", 0) and (
+                            v.lane_index == ("a", "b", 0) or v.lane_index == ("b", "c", 0))) or (
+                            lane_index == ("a", "b", 1) and (
+                            v.lane_index == ("a", "b", 1) or v.lane_index == ("b", "c", 1))):
                         s_v, lat_v = v.position
-                    elif lane_index == ("b", "c", 0) and (
+                    elif (lane_index == ("b", "c", 0) and (
                             v.lane_index == ("a", "b", 0) or v.lane_index == ("b", "c", 0) or v.lane_index == (
-                    "c", "d", 0)):
+                            "c", "d", 0))) or (lane_index == ("b", "c", 1) and (
+                            v.lane_index == ("a", "b", 1) or v.lane_index == ("b", "c", 1) or v.lane_index == (
+                            "c", "d", 1))):
                         s_v, lat_v = v.position
-                    elif lane_index == ("c", "d", 0) and (v.lane_index == ("b", "c", 0) or v.lane_index == (
-                    "c", "d", 0)):
+                    elif (lane_index == ("c", "d", 0) and (v.lane_index == ("b", "c", 0) or v.lane_index == (
+                            "c", "d", 0))) or (
+                            lane_index == ("c", "d", 1) and (v.lane_index == ("b", "c", 1) or v.lane_index == (
+                            "c", "d", 1))):
                         s_v, lat_v = v.position
                     else:
                         continue
@@ -329,11 +336,11 @@ class Road(object):
                         s_v, lat_v = v.position
                     elif lane_index == ("k", "b", 0) and (
                             v.lane_index == ("j", "k", 0) or v.lane_index == ("k", "b", 0) or v.lane_index == (
-                    "b", "c", 1)):
+                            "b", "c", 2)):
                         s_v, lat_v = v.position
-                    elif lane_index == ("b", "c", 1) and (
+                    elif lane_index == ("b", "c", 2) and (
                             v.lane_index == ("k", "b", 0) or v.lane_index == (
-                    "b", "c", 1)):
+                            "b", "c", 2)):
                         s_v, lat_v = v.position
                     else:
                         continue

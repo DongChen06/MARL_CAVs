@@ -1,6 +1,6 @@
 # Deep Multi-agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic
 
-This branch is for the multi-lane case as shown in the figure below. More functions will be tested and added...
+This branch is for the multi-lane case as shown in the figure below. More functions and evaluation will be tested and added...
 
 <p align="center">
      <img src="docs/on_ramp_merging_multiple.png" alt="output_example" width="60%" height="50%">

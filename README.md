@@ -34,6 +34,9 @@ To run the code, just run it via `python run_xxx.py`.  The config files contain 
      <br>Fig.2 Performance comparison between the proposed method and 3 state-of-the-art MARL algorithms.
 </p>
 
+To reproduce, we train the algorithms for 3 random seeds, 0, 2000, 2021. For example, we can set the *torch_seed* and *seed* to 0
+to run the seed 0. We can plot the comparison curves with the code: `python common/plot_benchmark_safety.py`
+
 ## Cite
 ```
 @misc{chen2021deep,

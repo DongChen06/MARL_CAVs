@@ -8,9 +8,19 @@ This branch is for the multi-lane case as shown in the figure below. More functi
 </p>
 
 
+We developed the multiple through-lane case with the reward function as follows.
+![image](https://user-images.githubusercontent.com/25771207/149983785-e4e561be-e48e-49db-83d9-d8a13bd25983.png)
+
+where $w_c$, $w_s$, $w_h$, $w_m$ and $w_l$ are positive weighting scalars corresponding to collision evaluation $r_c$, stable-speed evaluation $r_s$, headway time evaluation $r_h$, merging cost evaluation $r_m$, and lane-changing evaluation $r_l$, respectively. The goal of the new added lane-changing evaluation $r_l$ is to penalize unnecessary and frequent lane changes to avoid oscillatory driving.
+
+![image](https://user-images.githubusercontent.com/25771207/149983892-74da034c-0b4e-40f1-99f4-e10e378e5374.png)
+
+
 ## Usage
 To run the code, just run it via `python run_xxx.py`.  The config files contain the parameters for the MARL policies.
 
+## Demo
+[see the site](https://drive.google.com/file/d/1W9TLujYiIppCvcUkuq0ViH7MgibpT4GD/view?usp=sharing), we will add more chanllenging test cases in the future.
 
 ## Cite
 ```

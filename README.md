@@ -1,6 +1,6 @@
 # Deep Multi-agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic
 
-This branch is for the multi-lane case as shown in the figure below. More functions and evaluation will be tested and added...
+This branch is for the multiple through-lane case as shown in the figure below. More functions and evaluation will be tested and added...
 
 <p align="center">
      <img src="docs/on_ramp_merging_multiple.png" alt="output_example" width="60%" height="50%">
@@ -18,6 +18,8 @@ where $w_c$, $w_s$, $w_h$, $w_m$ and $w_l$ are positive weighting scalars corres
 
 ## Usage
 To run the code, just run it via `python run_xxx.py`.  The config files contain the parameters for the MARL policies.
+![image](https://user-images.githubusercontent.com/25771207/150018535-ce9bdff0-4042-4f9d-b385-82f3612c6596.png)
+
 
 ## Demo
 [see the site](https://drive.google.com/file/d/1W9TLujYiIppCvcUkuq0ViH7MgibpT4GD/view?usp=sharing), we will add more chanllenging test cases in the future.

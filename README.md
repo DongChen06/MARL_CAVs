@@ -18,7 +18,7 @@ where $w_c$, $w_s$, $w_h$, $w_m$ and $w_l$ are positive weighting scalars corres
 
 ## Usage
 To run the code, just run it via `python run_xxx.py`.  The config files contain the parameters for the MARL policies.
-![image](https://user-images.githubusercontent.com/25771207/150018535-ce9bdff0-4042-4f9d-b385-82f3612c6596.png)
+![image](https://user-images.githubusercontent.com/25771207/167273899-b84bc00c-6065-451f-8cff-4da9a6ded33a.png)
 
 
 ## Demo

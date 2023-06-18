@@ -5,7 +5,7 @@ An on-policy MARL algorithm for highway on-ramp merging problem, which features 
 ## Algorithms
 
 All the MARL algorithms are extended from the single-agent RL with parameter sharing among agents.
-- [ ] MAA2C: TBD.
+- [x] MAA2C: Accessible via email
 - [x] MAPPO.
 - [x] MAACKTR.
 - [x] MADQN: Does not work well.
@@ -52,4 +52,7 @@ to run the seed 0. We can plot the comparison curves with the code: `python comm
 ## Reference
 - [Highway-env](https://github.com/eleurent/highway-env)
 
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=DongChen06/MARL_CAVs&type=Date)](https://star-history.com/#DongChen06/MARL_CAVs&Date)
 

@@ -39,13 +39,12 @@ to run the seed 0. We can plot the comparison curves with the code: `python comm
 
 ## Cite
 ```
-@misc{chen2021deep,
-      title={Deep Multi-agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic}, 
-      author={Dong Chen and Zhaojian Li and Yongqiang Wang and Longsheng Jiang and Yue Wang},
-      year={2021},
-      eprint={2105.05701},
-      archivePrefix={arXiv},
-      primaryClass={eess.SY}
+@article{chen2023deep,
+  title={Deep multi-agent reinforcement learning for highway on-ramp merging in mixed traffic},
+  author={Chen, Dong and Hajidavalloo, Mohammad R and Li, Zhaojian and Chen, Kaian and Wang, Yongqiang and Jiang, Longsheng and Wang, Yue},
+  journal={IEEE Transactions on Intelligent Transportation Systems},
+  year={2023},
+  publisher={IEEE}
 }
 ```
 

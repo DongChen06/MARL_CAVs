@@ -51,7 +51,4 @@ to run the seed 0. We can plot the comparison curves with the code: `python comm
 ## Reference
 - [Highway-env](https://github.com/eleurent/highway-env)
 
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=DongChen06/MARL_CAVs&type=Date)](https://star-history.com/#DongChen06/MARL_CAVs&Date)
-
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=lB5CHRq4YiO6BlKy7Aza4x0Buok2xV4NqqR3-pU8FXM'></script>

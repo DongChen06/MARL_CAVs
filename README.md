@@ -50,5 +50,3 @@ to run the seed 0. We can plot the comparison curves with the code: `python comm
 
 ## Reference
 - [Highway-env](https://github.com/eleurent/highway-env)
-
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=lB5CHRq4YiO6BlKy7Aza4x0Buok2xV4NqqR3-pU8FXM"></script>

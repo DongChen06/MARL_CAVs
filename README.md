@@ -5,7 +5,7 @@ An on-policy MARL algorithm for highway on-ramp merging problem, which features 
 ## Algorithms
 
 All the MARL algorithms are extended from the single-agent RL with parameter sharing among agents.
-- [x] [MAA2C](https://drive.google.com/drive/folders/1CPOOYSQzqc0_XUr8durNWDUBv66PUHaM?usp=sharing)
+- [x] [MAA2C](https://drive.google.com/drive/folders/1CPOOYSQzqc0_XUr8durNWDUBv66PUHaM?usp=sharing) (The safety supervisor, curriculum learning settings are in configs/configs_a2c.ini)
 - [x] MAPPO.
 - [x] MAACKTR.
 - [x] MADQN: Does not work well.

@@ -39,6 +39,15 @@ to run the seed 0. We can plot the comparison curves with the code: `python comm
 
 ## Cite
 ```
+@book{chen2023deep,
+  title={Deep Multi-Agent Reinforcement Learning for Efficient and Scalable Networked System Control},
+  author={Chen, Dong},
+  year={2023},
+  publisher={Michigan State University}
+}
+```
+
+```
 @article{chen2023deep,
   title={Deep multi-agent reinforcement learning for highway on-ramp merging in mixed traffic},
   author={Chen, Dong and Hajidavalloo, Mohammad R and Li, Zhaojian and Chen, Kaian and Wang, Yongqiang and Jiang, Longsheng and Wang, Yue},
